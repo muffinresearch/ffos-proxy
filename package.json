@@ -1,0 +1,30 @@
+{
+  "name": "ffos-proxify",
+  "version": "0.0.1",
+  "description": "A command to add certs and turn-on proxying on a FFOS device.",
+  "main": "bin/proxify.js",
+  "scripts": {
+    "test": "node -e \"require('grunt').cli()\" null test"
+  },
+  "author": "Stuart Colville",
+  "license": "MPL 2.0",
+  "dependencies": {
+    "adbkit": "^2.1.5",
+    "bluebird": "^2.3.11",
+    "inquirer": "^0.8.0",
+    "shelljs": "^0.3.0",
+    "underscore": "^1.7.0",
+    "yargs": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muffinresearch/ffos-proxy.git"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.2.1"
+  }
+}
