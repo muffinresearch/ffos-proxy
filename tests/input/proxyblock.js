@@ -19,9 +19,11 @@ var templateBlob = [
   end,
 ].join('\n');
 
+var nonDelimtedBlob = 'pref("network.proxy.backup.socks", "{{ proxy_ip }}");';
 
 module.exports = {
   testBlob: testBlob,
   testBlob2: testBlob2,
   templateBlob: templateBlob,
+  nonDelimtedBlob: nonDelimtedBlob,
 };
