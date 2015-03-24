@@ -1,6 +1,6 @@
 {
   "boss": true,
-  "browser": true,
+  "browser": false,
   "camelcase": false,
   "eqeqeq": true,
   "eqnull": true,
@@ -20,13 +20,13 @@
   "noarg": true,
   "passfail": false,
   "predef": [
-    "Promise",
+    "-Promise",
     "afterEach",
     "assert",
     "beforeEach",
     "describe",
+    "debug",
     "exports",
-    "globals",
     "it",
     "process"
   ],
