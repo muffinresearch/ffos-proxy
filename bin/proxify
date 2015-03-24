@@ -1,34 +1,35 @@
 #!/usr/bin/env node
 
-var inquirer = require('inquirer');
+/*jshint -W030 */
 
-var network = require('../lib/network');
-var adb = require('../lib/adb');
+var yargs = require('yargs');
+var commands = require('../lib/commands');
 
-adb.client.listDevices()
-  .then(function(devices) {
-    var deviceList = adb.getDevicesList(devices);
-    inquirer.prompt([{
-        name: 'device-id',
-        type: 'list',
-        message: 'Choose a device',
-        choices: deviceList,
-      }, {
-        name: 'proxy-ip',
-        type: 'list',
-        message: 'Choose a proxy IP',
-        choices: network.getIps(),
-      }, {
-        name: 'proxy-port',
-        type: 'number',
-        message: 'What port is your proxy running on',
-        default: 8888,
-      }], function(answers){
-        console.log(JSON.stringify(answers));
-      });
-  })
-  .catch(function(err) {
-    console.error(err.toString());
-  });
+yargs.usage('Proxify: Setup and configure a proxy on your FFOS device\n\n' +
+           'Usage: $0 <command>')
+     .demand(1)
+     .command('enable', 'Configure and enable the proxy on a chosen device')
+     .command('count', 'Disable the proxy on a chosen device')
+     .command('add-certs', 'Add the certs to a chosen device');
 
+  var argv = yargs.argv;
+  var command = argv._[0];
 
+if (command === 'enable') {
+  yargs.reset()
+    .usage('$0 enable')
+    .argv;
+  commands.enableProxy();
+} else if (command === 'disable'){
+  yargs.reset()
+    .usage('$0 disable')
+    .argv;
+  commands.disableProxy();
+} else if (command === 'add-certs'){
+  yargs.reset()
+    .usage('$0 add-certs')
+    .argv;
+  commands.addCerts();
+} else {
+  yargs.showHelp();
+}

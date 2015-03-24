@@ -32,7 +32,7 @@ describe('Template extraction', function(){
                    'proxy_ip: 192.168.0.10');
   });
 
-  it('should containe proxy_port in templated output', function(){
+  it('should containe proxy_port in templated output', function() {
     assert.include(utils.templateProxyBlock(input.templateBlob, proxyData),
                    'proxy_port: 9999');
   });
@@ -48,5 +48,20 @@ describe('Template extraction', function(){
     assert.include(replaced, 'proxy_port: 9999');
   });
 
+  it('should detect proxy configuration', function(){
+    assert.ok(utils.containsProxyConf(input.nonDelimtedBlob));
+    assert.notOk(utils.hasProxyBlock(input.nonDelimtedBlob));
+  });
+
+  it('should not detect proxy conf configuration', function(){
+    assert.notOk(utils.containsProxyConf('whatever'));
+    assert.notOk(utils.hasProxyBlock('whatever'));
+  });
+
+  it('should throw on old proxy conf being detected', function() {
+    assert.throws(function() {
+      utils.detectLegacyConf(input.nonDelimtedBlob);
+    }, /Refusing to process/);
+  });
 });
 
