@@ -1,5 +1,5 @@
 {
-  "name": "ffos-proxify",
+  "name": "ffos-proxy",
   "version": "0.0.1",
   "description": "A command to add certs and turn-on proxying on a FFOS device.",
   "main": "bin/proxify.js",
