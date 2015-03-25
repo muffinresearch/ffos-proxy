@@ -11,6 +11,7 @@
   "globals": {
     "define": false
   },
+  "globalstrict": true,
   "indent": 2,
   "laxbreak": true,
   "laxcomma": true,
@@ -25,7 +26,6 @@
     "assert",
     "beforeEach",
     "describe",
-    "debug",
     "exports",
     "it",
     "process"

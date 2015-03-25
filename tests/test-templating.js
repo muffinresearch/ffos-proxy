@@ -1,3 +1,5 @@
+'use strict';
+
 var input = require('./input/proxyblock');
 var utils = require('../lib/utils');
 

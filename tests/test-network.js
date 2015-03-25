@@ -1,3 +1,5 @@
+'use strict';
+
 var input = require('./input/interfaces').interfaces;
 var network = require('../lib/network');
 
