@@ -10,6 +10,7 @@
   "license": "MPL 2.0",
   "dependencies": {
     "adbkit": "^2.1.5",
+    "chalk": "^1.0.0",
     "es6-promise": "^2.0.1",
     "inquirer": "^0.8.0",
     "shelljs": "^0.4.0",
