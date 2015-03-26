@@ -9,24 +9,24 @@
   "author": "Stuart Colville",
   "license": "MPL 2.0",
   "dependencies": {
-    "adbkit": "^2.1.5",
-    "chalk": "^1.0.0",
-    "es6-promise": "^2.0.1",
-    "inquirer": "^0.8.0",
-    "shelljs": "^0.4.0",
-    "underscore": "^1.8.2",
-    "yargs": "^3.6.0"
+    "adbkit": "2.1.6",
+    "chalk": "1.0.0",
+    "es6-promise": "2.0.1",
+    "inquirer": "0.8.0",
+    "shelljs": "0.4.0",
+    "underscore": "1.8.2",
+    "yargs": "3.6.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/muffinresearch/ffos-proxy.git"
   },
   "devDependencies": {
-    "chai": "^2.1.2",
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.1",
-    "grunt-mocha-test": "^0.12.7",
-    "mocha": "^2.2.1",
-    "mockery": "^1.4.0"
+    "chai": "2.1.2",
+    "grunt": "0.4.5",
+    "grunt-contrib-jshint": "0.11.1",
+    "grunt-mocha-test": "0.12.7",
+    "mocha": "2.2.1",
+    "mockery": "1.4.0"
   }
 }

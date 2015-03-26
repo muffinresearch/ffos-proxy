@@ -28,7 +28,8 @@
     "describe",
     "exports",
     "it",
-    "process"
+    "process",
+    "which"
   ],
   "shadow": false,
   "strict": false,
