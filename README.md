@@ -16,9 +16,12 @@ Proxify: Setup and configure a proxy on your FFOS device
 Usage: bin/ffos-proxy <command>
 
 Commands:
-  enable       Configure and enable the proxy on a chosen device                
-  disable      Disable the proxy on a chosen device                             
+  enable       Configure and enable the proxy on a chosen device
+  disable      Disable the proxy on a chosen device
   add-certs    Add the certs to a chosen device
+
+Options:
+  --stack  show stack traces on errors                        [default: "false"]
 ```
 
 ## Requirements
@@ -33,6 +36,7 @@ Commands:
 
 *Note: a slicker setup to be added in due course*
 
-* clone this repo and cd into it.
+* Clone this repo and cd into it.
+* Copy your generated cert into the certs directory.
 * Run `npm install`
-* Run command with `bin/ffos-proxy`
+* Run command with `bin/ffos-proxy` to see the options.
