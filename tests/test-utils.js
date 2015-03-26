@@ -16,4 +16,22 @@ describe('utils.trimBrackets()', function(){
     assert.equal(utils.trimBrackets(' whatever '), 'whatever');
   });
 
+  it('should collapse homedir to ~', function(){
+    assert.equal(utils.collapseHomeDir('/Users/foo/', '/Users/foo'), '~');
+  });
+
+  it('should not collapse homedir to ~', function(){
+    assert.equal(utils.collapseHomeDir('/Users/foo', '/Users/foo'),
+                 '/Users/foo');
+  });
+
+  it('should collapse homedir to ~/bar', function(){
+    assert.equal(utils.collapseHomeDir('/Users/foo/bar', '/Users/foo'),
+                 '~/bar');
+  });
+
+  it('should not collapse homedir', function(){
+    assert.equal(utils.collapseHomeDir('/foo', '/Users/foo'), '/foo');
+  });
+
 });
