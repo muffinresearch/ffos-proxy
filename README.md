@@ -6,7 +6,7 @@
 
 # ffos-proxy
 
-*Warning: For development purposes only. Use at your own risk and for good, not evil etc...
+*Warning: For development purposes only. Use at your own risk and for good, not evil etc...*
 
 Proxy setup automation for FFOS developer devices
 
