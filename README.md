@@ -10,7 +10,7 @@
 
 Proxy setup automation for FFOS developer devices
 
-```shell
+```
 Proxify: Setup and configure a proxy on your FFOS device
 
 Usage: bin/ffos-proxy <command>
