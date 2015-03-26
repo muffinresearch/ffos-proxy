@@ -9,6 +9,11 @@ var commands = require('../lib/commands');
 
 yargs.usage('Proxify: Setup and configure a proxy on your FFOS device\n\n' +
            'Usage: $0 <command>')
+     .option('stack', {
+        default: 'false',
+        describe: 'show stack traces on errors',
+        type: 'bool'
+      })
      .demand(1)
      .command('enable', 'Configure and enable the proxy on a chosen device')
      .command('disable', 'Disable the proxy on a chosen device')
@@ -16,6 +21,10 @@ yargs.usage('Proxify: Setup and configure a proxy on your FFOS device\n\n' +
 
   var argv = yargs.argv;
   var command = argv._[0];
+
+if (argv.stack === true) {
+  global.debug = true;
+}
 
 if (command === 'enable') {
   yargs.reset()
