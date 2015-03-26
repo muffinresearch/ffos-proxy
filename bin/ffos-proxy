@@ -11,7 +11,7 @@ yargs.usage('Proxify: Setup and configure a proxy on your FFOS device\n\n' +
            'Usage: $0 <command>')
      .demand(1)
      .command('enable', 'Configure and enable the proxy on a chosen device')
-     .command('count', 'Disable the proxy on a chosen device')
+     .command('disable', 'Disable the proxy on a chosen device')
      .command('add-certs', 'Add the certs to a chosen device');
 
   var argv = yargs.argv;
